@@ -2,8 +2,8 @@
 
 {
   networking = {
-	hostName = "nyanix";
-	networkmanager.enable = true;
-	firewall.enable = false;
+    hostName = "nyanix";
+    networkmanager.enable = true;
+    firewall.enable = false;
   };
 }

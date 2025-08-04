@@ -4,7 +4,7 @@
   programs = {
     fastfetch.enable = true;
 
-	hyfetch = {
+    hyfetch = {
       enable = true;
 
       settings = {

@@ -16,13 +16,13 @@ in
     customColorSchemes.sweet = "${sweet-kde-theme}/kde/konsole/Sweet-Ambar-Blue.colorscheme";
 
     profiles = {
-	  "Nyanix" = {
+      "Nyanix" = {
         colorScheme = "sweet";
         font = {
           name = "FiraCode Nerd Font";
           size = 10;
         };
-	  };
+      };
     };
   };
 }
