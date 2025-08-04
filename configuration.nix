@@ -16,10 +16,19 @@
     shell = pkgs.zsh;
   };
 
-  programs.zsh.enable = true;
-  programs.git.enable = true;
+
+  programs = {
+    zsh.enable = true;
+    git.enable = true;
+
+    java = {
+      enable = true;
+      package = pkgs.jetbrains.jdk;
+    };
+  };
 
   environment.systemPackages = with pkgs; [
+    jetbrains.jdk
     kdePackages.kate
     kdePackages.kcalc
     kdePackages.krdc
