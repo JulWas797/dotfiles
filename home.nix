@@ -8,6 +8,7 @@
     ./user/konsole.nix
     ./user/git.nix
     ./user/direnv.nix
+    ./user/plasma.nix
   ];
 
   home = {
@@ -25,6 +26,10 @@
       ".sdk/jdk/zulu17".source = pkgs.zulu17.home;
       ".sdk/jdk/zulu21".source = pkgs.zulu21.home;
       ".sdk/jdk/jetbrains".source = pkgs.jetbrains.jdk.home;
+    };
+
+    sessionVariables = {
+      MOZ_ENABLE_WAYLAND=1;
     };
   };
 
