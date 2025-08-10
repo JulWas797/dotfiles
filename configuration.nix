@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ pkgs, ... }:
 
 {
   imports = [
@@ -37,6 +37,7 @@
     kdePackages.yakuake
     haruna
     htop
+    nixd
     telegram-desktop
     tree
     undollar
@@ -61,7 +62,7 @@
     gc = {
       automatic = true;
       dates = "weekly";
-      options = "--delete-older-than 14d";
+      options = "--delete-older-than 30d";
     };
 
     settings.experimental-features = [

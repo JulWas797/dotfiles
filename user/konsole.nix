@@ -1,4 +1,4 @@
-{ pkgs, config, ... }:
+{ pkgs, ... }:
 
 let
   sweet-kde-theme = pkgs.fetchFromGitHub {

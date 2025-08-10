@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ pkgs, ... }:
 
 {
   imports = [
@@ -9,6 +9,7 @@
     ./user/git.nix
     ./user/direnv.nix
     ./user/plasma.nix
+    ./user/codium.nix
   ];
 
   home = {
@@ -30,6 +31,7 @@
 
     sessionVariables = {
       MOZ_ENABLE_WAYLAND=1;
+      NIXOS_OZONE_WL=1;
     };
   };
 
