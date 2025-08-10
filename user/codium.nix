@@ -5,8 +5,6 @@
     enable = true;
     package = pkgs.vscodium;
 
-    
-
     profiles.default = {
       extensions = with pkgs.vscode-extensions; [
         formulahendry.code-runner
