@@ -16,7 +16,6 @@
     shell = pkgs.zsh;
   };
 
-
   programs = {
     zsh.enable = true;
     git.enable = true;
@@ -28,17 +27,19 @@
   };
 
   environment.systemPackages = with pkgs; [
-    jetbrains.jdk
     kdePackages.kate
     kdePackages.kcalc
     kdePackages.krdc
     kdePackages.isoimagewriter
     kdePackages.partitionmanager
     kdePackages.yakuake
+
+    jetbrains.jdk
+
+    ayugram-desktop
     haruna
     htop
     nixd
-    telegram-desktop
     tree
     undollar
     vim

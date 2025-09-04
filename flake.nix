@@ -11,11 +11,14 @@
 
     plasma-manager = {
       url = "github:nix-community/plasma-manager";
+
       inputs = {
         nixpkgs.follows = "nixpkgs";
         home-manager.follows = "home-manager";
       };
     };
+
+    nix-vscode-extensions.url = "github:nix-community/nix-vscode-extensions";
   };
 
   outputs =
@@ -23,25 +26,38 @@
       nixpkgs,
       home-manager,
       plasma-manager,
+      nix-vscode-extensions,
       ...
     }:
+
     {
       nixosConfigurations = {
-      nyanix = nixpkgs.lib.nixosSystem {
-        system = "x86_64-linux";
-        modules = [
-          ./configuration.nix
-          home-manager.nixosModules.home-manager
-          {
-            home-manager.useGlobalPkgs = true;
-            home-manager.useUserPackages = true;
-            home-manager.sharedModules = [
-              plasma-manager.homeManagerModules.plasma-manager
-            ];
-            home-manager.users.jwas = import ./home.nix;
-          }
-        ];
+
+        nyanix = nixpkgs.lib.nixosSystem {
+          system = "x86_64-linux";
+
+          modules = [
+            ./configuration.nix
+            home-manager.nixosModules.home-manager
+
+            {
+
+              nixpkgs.overlays = [
+                nix-vscode-extensions.overlays.default
+              ];
+
+              home-manager.useGlobalPkgs = true;
+              home-manager.useUserPackages = true;
+
+              home-manager.sharedModules = [
+                plasma-manager.homeManagerModules.plasma-manager
+                
+              ];
+
+              home-manager.users.jwas = import ./home.nix;
+            }
+          ];
+        };
       };
-    };
   };
 }
