@@ -41,7 +41,6 @@
             home-manager.nixosModules.home-manager
 
             {
-
               nixpkgs.overlays = [
                 nix-vscode-extensions.overlays.default
               ];

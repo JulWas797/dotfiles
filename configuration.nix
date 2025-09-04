@@ -24,6 +24,13 @@
       enable = true;
       package = pkgs.jetbrains.jdk;
     };
+
+    steam = {
+      enable = true;
+      remotePlay.openFirewall = true;
+      dedicatedServer.openFirewall = true;
+      localNetworkGameTransfers.openFirewall = true;
+    };
   };
 
   environment.systemPackages = with pkgs; [
@@ -41,7 +48,6 @@
     htop
     nixd
     tree
-    undollar
     vim
     wget
     yt-dlp
