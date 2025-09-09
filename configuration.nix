@@ -25,6 +25,8 @@
       package = pkgs.jetbrains.jdk;
     };
 
+    gamemode.enable = true;
+
     steam = {
       enable = true;
       remotePlay.openFirewall = true;
@@ -46,6 +48,7 @@
     ayugram-desktop
     haruna
     htop
+    libreoffice
     nixd
     tree
     vim
