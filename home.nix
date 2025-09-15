@@ -19,7 +19,7 @@
 
     packages = with pkgs; [
       jetbrains.idea-ultimate
-      modrinth-app
+      prismlauncher
     ];
 
     file = {
