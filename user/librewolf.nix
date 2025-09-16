@@ -56,6 +56,10 @@
           install_url = "https://addons.mozilla.org/firefox/downloads/latest/clearurls/latest.xpi";
           installation_mode = "force_installed";
         };
+        "{458160b9-32eb-4f4c-87d1-89ad3bdeb9dc}" = {
+          install_url = "https://addons.mozilla.org/firefox/downloads/latest/youtube-anti-translate/latest.xpi";
+          installation_mode = "force_installed";
+        };
       };
 
       ManualAppUpdateOnly = true;
