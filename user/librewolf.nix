@@ -77,8 +77,19 @@
         "browser.send_pings" = false;
         "browser.send_pings.require_same_host" = true;
         "dom.webnotifications.enabled" = false;
+        "media.eme.enabled" = false;
+        "media.gmp-widevinecdm.enabled" = false;
+        "media.peerconnection.enabled" = false;
+        "network.IDN_show_punycode" = true;
         "network.captive-portal-service.enabled" = false;
-        "widget.use-xdg-desktop-portal.file-picker" = "1";
+        "network.dns.disablePrefetch" = true;
+        "network.dns.disablePrefetchFromHTTPS" = true;
+        "network.http.referer.spoofSource" = true;
+        "network.http.speculative-parallel-limit" = 0;
+        "network.predictor.enable-prefetch" = false;
+        "network.predictor.enabled" = false;
+        "network.prefetch-next" = false;
+        "widget.use-xdg-desktop-portal.file-picker" = 1;
       };
     };
 
