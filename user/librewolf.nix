@@ -79,7 +79,7 @@
         "dom.webnotifications.enabled" = false;
         "media.eme.enabled" = false;
         "media.gmp-widevinecdm.enabled" = false;
-        "media.peerconnection.enabled" = false;
+        #"media.peerconnection.enabled" = false;
         "network.IDN_show_punycode" = true;
         "network.captive-portal-service.enabled" = false;
         "network.dns.disablePrefetch" = true;
