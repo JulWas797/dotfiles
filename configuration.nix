@@ -42,27 +42,37 @@
     };
   };
 
-  environment.systemPackages = with pkgs; [
-    kdePackages.kate
-    kdePackages.kcalc
-    kdePackages.krdc
-    kdePackages.isoimagewriter
-    kdePackages.partitionmanager
-    kdePackages.yakuake
+  environment = {
+    systemPackages = with pkgs; [
+      kdePackages.kate
+      kdePackages.kcalc
+      kdePackages.krdc
+      kdePackages.isoimagewriter
+      kdePackages.partitionmanager
+      kdePackages.yakuake
 
-    jetbrains.jdk
+      jetbrains.jdk
 
-    ayugram-desktop
-    haruna
-    htop
-    libreoffice
-    nixd
-    tree
-    vim
-    wget
-    yt-dlp
-  ];
+      ayugram-desktop
+      haruna
+      htop
+      libreoffice
+      nixd
+      tree
+      vim
+      wget
+      yt-dlp
+    ];  
 
+    etc = {
+      "1password/custom_allowed_browsers" = {
+        text = ''
+          librewolf
+        '';
+        mode = "0755";
+      };
+    };
+  };
   fonts.packages = with pkgs; [
     helvetica-neue-lt-std
     nerd-fonts.fira-code
