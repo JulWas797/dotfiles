@@ -18,6 +18,8 @@
     stateVersion = "25.05";
 
     packages = with pkgs; [
+      _1password
+      _1password-gui
       jetbrains.idea-ultimate
       prismlauncher
     ];
