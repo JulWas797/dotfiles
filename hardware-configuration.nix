@@ -46,8 +46,6 @@
     enableAllFirmware = true;
     enableRedistributableFirmware = true;
 
-    pulseaudio.enable = lib.mkDefault false;
-
     cpu.amd.updateMicrocode = lib.mkDefault config.hardware.enableRedistributableFirmware;
   };
 }
