@@ -56,6 +56,7 @@
       ayugram-desktop
       haruna
       htop
+      iw
       libreoffice
       nixd
       tree

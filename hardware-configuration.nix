@@ -35,5 +35,8 @@
   hardware.wirelessRegulatoryDatabase = true;
   hardware.enableAllFirmware = true;
   hardware.enableRedistributableFirmware = true;
-  
+
+  boot.extraModprobeConfig = ''
+    options cfg80211 ieee80211_regdom="PL"
+  '';
 }
