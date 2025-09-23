@@ -19,7 +19,7 @@
       userSettings = {
         "editor.cursorBlinking"= "smooth";
         "editor.cursorSmoothCaretAnimation"= "on";
-        "editor.colorTheme"= "sweet-vscode";
+        "editor.colorTheme"= "Jetbrains Dracula Theme";
         "editor.fontFamily" = "'FiraCode Nerd Font', 'monospace', monospace";
         "nix.enableLanguageServer" = true;
         "nix.serverPath" = "nixd";

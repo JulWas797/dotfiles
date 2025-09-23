@@ -44,8 +44,6 @@
 
   environment = {
     systemPackages = with pkgs; [
-      wireless-regdb
-
       kdePackages.kate
       kdePackages.kcalc
       kdePackages.krdc
