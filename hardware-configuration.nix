@@ -1,25 +1,36 @@
 { config, lib, pkgs, modulesPath, ... }:
 
 {
-  imports =
-    [ (modulesPath + "/installer/scan/not-detected.nix")
-    ];
+  imports = [ 
+    (modulesPath + "/installer/scan/not-detected.nix") 
+  ];
 
-  boot.initrd.availableKernelModules = [ "nvme" "xhci_pci" "usb_storage" "sd_mod" ];
-  boot.initrd.kernelModules = [ "amdgpu" ];
-  boot.kernelModules = [ "kvm-amd" ];
-  boot.extraModulePackages = [ ];
+  boot = {
+    initrd = {
+      availableKernelModules = [ "nvme" "xhci_pci" "usb_storage" "sd_mod" ];
+      kernelModules = [ "amdgpu" ];
+    };
 
-  fileSystems."/" =
-    { device = "/dev/disk/by-uuid/33bc7119-94a2-426d-8cd9-a10d3f523d2b";
+    kernelModules = [ "kvm-amd" ];
+    extraModulePackages = [ ]; # For future
+
+    extraModprobeConfig = ''
+      options cfg80211 ieee80211_regdom="PL"
+    '';
+  };
+
+  fileSystems = {
+    "/" = { 
+      device = "/dev/disk/by-uuid/33bc7119-94a2-426d-8cd9-a10d3f523d2b";
       fsType = "ext4";
     };
 
-  fileSystems."/boot" =
-    { device = "/dev/disk/by-uuid/8AAB-D1C1";
+    "/boot" = { 
+      device = "/dev/disk/by-uuid/8AAB-D1C1";
       fsType = "vfat";
       options = [ "fmask=0022" "dmask=0022" ];
     };
+  };
 
   swapDevices = [{
     device = "/var/lib/swapfile";
@@ -30,13 +41,11 @@
 
   nixpkgs.hostPlatform = lib.mkDefault "x86_64-linux";
   
-  hardware.cpu.amd.updateMicrocode = lib.mkDefault config.hardware.enableRedistributableFirmware;
+  hardware = {
+    wirelessRegulatoryDatabase = true;
+    enableAllFirmware = true;
+    enableRedistributableFirmware = true;
 
-  hardware.wirelessRegulatoryDatabase = true;
-  hardware.enableAllFirmware = true;
-  hardware.enableRedistributableFirmware = true;
-
-  boot.extraModprobeConfig = ''
-    options cfg80211 ieee80211_regdom="PL"
-  '';
+    cpu.amd.updateMicrocode = lib.mkDefault config.hardware.enableRedistributableFirmware;
+  };
 }
