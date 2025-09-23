@@ -44,6 +44,8 @@
 
   environment = {
     systemPackages = with pkgs; [
+      wireless-regdb
+
       kdePackages.kate
       kdePackages.kcalc
       kdePackages.krdc
@@ -73,6 +75,7 @@
       };
     };
   };
+
   fonts.packages = with pkgs; [
     helvetica-neue-lt-std
     nerd-fonts.fira-code
