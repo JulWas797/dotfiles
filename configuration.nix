@@ -54,6 +54,7 @@
       jetbrains.jdk
 
       ayugram-desktop
+      deadbeef
       haruna
       htop
       iw

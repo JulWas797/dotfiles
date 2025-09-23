@@ -16,10 +16,11 @@
 
       extraConfig.pipewire.dac = { 
         "context.properties" = {
+          "default.clock.rate" = 48000;
           "default.clock.allowed-rates" = [ 44100 48000 192000 ]; 
-          "default.clock.quantum" = 32;
-          "default.clock.min-quantum" = 32;
-          "default.clock.max-quantum" = 32;
+          "default.clock.quantum" = 512;
+          "default.clock.min-quantum" = 128;
+          "default.clock.max-quantum" = 2048;
         }; 
       };
     };
