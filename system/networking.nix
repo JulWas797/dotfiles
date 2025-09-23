@@ -3,7 +3,14 @@
 {
   networking = {
     hostName = "nyanix";
-    networkmanager.enable = true;
+    
+    wireless.iwd.enable = true;
+    
+    networkmanager = {
+      enable = true;
+      wifi.backend = "iwd";
+    };
+
     firewall.enable = false;
   };
 }
