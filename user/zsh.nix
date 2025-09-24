@@ -3,8 +3,8 @@
 let
  agnoster-nix-theme = pkgs.fetchgit {
     url = "https://gist.github.com/JulWas797/72373e205a998b4a9d146bbdb03b4e36";
-    rev = "2ac0de1d962784c69b6233da7d7bbe134e902557";
-    sha256 = "sha256-dpZCR4tdL5MM9hPm1YtYk8HojpKuWUH+jWqdNUM7fu4=";
+    rev = "b00ccf424994122748ba4b9f08e944cf161c12f2";
+    sha256 = "sha256-LLJQIPvbRUCnMXea66S3TnQglRij8bsEQUlzOWagNxg=";
   };
 
   zsh-customs = pkgs.stdenv.mkDerivation {
