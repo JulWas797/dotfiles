@@ -13,7 +13,7 @@ let
     phases = [ "buildPhase" ];
     buildPhase = ''
       mkdir -p $out/themes
-      cp ${agnoster-nix-theme} $out/themes/agnoster-nix.zsh-theme
+      cp "${agnoster-nix-theme}"/agnoster-nix.zsh-theme $out/themes/agnoster-nix.zsh-theme
     '';
   };
 in
