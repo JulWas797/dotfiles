@@ -2,9 +2,9 @@
 
 let
  agnoster-nix-theme = pkgs.fetchgit {
-    url = "https://gist.github.com/CollinDewey/2e6b6c5b257d2f6895603ddb160e6f1d";
-    rev = "804f5d1bd9cb37c18cba252ff4eebf62dadc5c7f";
-    sha256 = "sha256-iwFVyG3Np+vLJMhbW8b00mnCXSMY+f69lUGzl8rqfhU=";
+    url = "https://gist.github.com/JulWas797/72373e205a998b4a9d146bbdb03b4e36";
+    rev = "2ac0de1d962784c69b6233da7d7bbe134e902557";
+    sha256 = "sha256-zg4o2pkKu6txSMzZ/eVtUq3+VDoxVLxBDqiOlGZy+0w=";
   };
 
   zsh-customs = pkgs.stdenv.mkDerivation {
