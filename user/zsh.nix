@@ -25,7 +25,7 @@ in
       upd = "cd ~/.dotfiles && nix flake update && sudo nixos-rebuild switch --flake .";
     };
 
-    ohMyZsh = {
+    oh-my-zsh = {
       enable = true;
       theme = "agnoster-nix";
 
