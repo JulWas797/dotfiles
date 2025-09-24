@@ -52,6 +52,4 @@ in
       }
     ];
   };
-
-  home.file.".oh-my-zsh/custom/themes/agnoster-nix.zsh-theme".source = agnoster-nix-theme;
 }
