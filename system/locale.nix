@@ -6,6 +6,8 @@
   i18n = {
     defaultLocale = "en_US.UTF-8";
 
+    i18n.supportedLocales = [ "all" ];
+
     extraLocaleSettings = {
       LC_ADDRESS = "pl_PL.UTF-8";
       LC_IDENTIFICATION = "pl_PL.UTF-8";
