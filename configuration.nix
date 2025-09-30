@@ -8,6 +8,7 @@
     ./system/networking.nix
     ./system/locale.nix
     ./system/audio.nix
+    ./system/tuned.nix
   ];
 
   users.users.jwas = {
