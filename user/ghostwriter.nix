@@ -8,5 +8,5 @@
       name = "FiraCode Nerd Font";
       size = 12;
     };
-  }
+  };
 }
