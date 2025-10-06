@@ -11,7 +11,6 @@
         chadalen.vscode-jetbrains-icon-theme
         formulahendry.code-runner
         jnoortheen.nix-ide
-        mkhl.direnv
         ms-ceintl.vscode-language-pack-pl
         nimlang.nimlang
       ];
