@@ -4,7 +4,7 @@
   programs.ghostwriter = {
     enable = true;
 
-    preview.codeFont = {
+    font = {
       family = "FiraCode Nerd Font";
       pointSize = 12;
     };
