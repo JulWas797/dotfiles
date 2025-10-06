@@ -5,8 +5,8 @@
     enable = true;
 
     preview.codeFont = {
-      name = "FiraCode Nerd Font";
-      size = 12;
+      family = "FiraCode Nerd Font";
+      pointSize = 12;
     };
   };
 }
