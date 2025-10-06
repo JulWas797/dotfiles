@@ -10,6 +10,7 @@
     ./user/direnv.nix
     ./user/plasma.nix
     ./user/codium.nix
+    ./user/ghostwriter.nix
   ];
 
   home = {

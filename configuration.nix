@@ -45,12 +45,10 @@
 
   environment = {
     systemPackages = with pkgs; [
-      kdePackages.ghostwriter
       kdePackages.isoimagewriter
       kdePackages.kate
       kdePackages.kcalc
       kdePackages.krdc
-      kdePackages.kmail
       kdePackages.partitionmanager
       kdePackages.yakuake
 
