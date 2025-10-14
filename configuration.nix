@@ -54,10 +54,8 @@
 
       jetbrains.jdk
 
-      art
       ayugram-desktop
       deadbeef
-      digikam
       haruna
       htop
       iw
