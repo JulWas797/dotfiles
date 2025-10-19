@@ -1,5 +1,8 @@
 { pkgs, ... }:
 
+let 
+  face = ./files/.face;
+in
 {
   imports = [
     ./modules/fetch.nix
@@ -20,6 +23,8 @@
 
     file = {
       ".sdk/jdk/jetbrains".source = pkgs.jetbrains.jdk.home;
+      ".face".source = face;
+      ".face.icon".source = face;
     };
 
     sessionVariables = {
