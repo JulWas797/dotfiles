@@ -1,5 +1,5 @@
 {
-  description = "Flakie :3";
+  description = "Flakie :3 (NEW: No longer monolythic)";
   
   inputs = {
     nixpkgs.url = "nixpkgs/nixos-25.05";
@@ -37,7 +37,8 @@
           system = "x86_64-linux";
 
           modules = [
-            ./configuration.nix
+            ./hosts/nyanix/configuration.nix
+
             home-manager.nixosModules.home-manager
 
             {
@@ -50,10 +51,9 @@
 
               home-manager.sharedModules = [
                 plasma-manager.homeModules.plasma-manager
-                
               ];
 
-              home-manager.users.jwas = import ./home.nix;
+              home-manager.users.jwas = import ./home/nyanix/home.nix;
             }
           ];
         };

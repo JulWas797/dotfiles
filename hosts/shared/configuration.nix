@@ -2,13 +2,12 @@
 
 {
   imports = [
-    ./hardware-configuration.nix
-    ./system/boot.nix
-    ./system/desktop.nix
-    ./system/networking.nix
-    ./system/locale.nix
-    ./system/audio.nix
-    ./system/tuned.nix
+    ./modules/boot.nix
+    ./modules/desktop.nix
+    ./modules/networking.nix
+    ./modules/locale.nix
+    ./modules/audio.nix
+    ./modules/tuned.nix
   ];
 
   users.users.jwas = {
@@ -26,15 +25,6 @@
       package = pkgs.jetbrains.jdk;
     };
 
-    gamemode.enable = true;
-
-    steam = {
-      enable = true;
-      remotePlay.openFirewall = true;
-      dedicatedServer.openFirewall = true;
-      localNetworkGameTransfers.openFirewall = true;
-    };
-
     _1password.enable = true;
 
     _1password-gui = {
@@ -49,6 +39,7 @@
       kdePackages.kate
       kdePackages.kcalc
       kdePackages.krdc
+      kdePackages.okular
       kdePackages.partitionmanager
       kdePackages.yakuake
 
@@ -58,8 +49,6 @@
       deadbeef
       haruna
       htop
-      iw
-      libreoffice
       nixd
       tree
       vim
