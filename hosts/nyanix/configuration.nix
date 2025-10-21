@@ -3,6 +3,8 @@
 {
   imports = [
     ./hardware-configuration.nix
+    ./modules/audio.nix
+    ./modules/tuned.nix
     ../shared/configuration.nix
   ];
 

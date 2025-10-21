@@ -6,8 +6,6 @@
     ./modules/desktop.nix
     ./modules/networking.nix
     ./modules/locale.nix
-    ./modules/audio.nix
-    ./modules/tuned.nix
   ];
 
   users.users.jwas = {
@@ -46,14 +44,12 @@
       jetbrains.jdk
 
       ayugram-desktop
-      deadbeef
       haruna
       htop
       nixd
       tree
       vim
       wget
-      yt-dlp
     ];  
 
     etc = {

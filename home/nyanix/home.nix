@@ -8,8 +8,10 @@
 
   home = {
     packages = with pkgs; [
+      deadbeef
       jetbrains.idea-ultimate
       prismlauncher
+      yt-dlp
     ];
 
     file = {
