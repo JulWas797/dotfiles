@@ -57,6 +57,31 @@
             }
           ];
         };
+
+        shinjuku = nixpkgs.lib.nixosSystem {
+          system = "x86_64-linux";
+
+          modules = [
+            ./hosts/shinjuku/configuration.nix
+
+            home-manager.nixosModules.home-manager
+
+            {
+              nixpkgs.overlays = [
+                nix-vscode-extensions.overlays.default
+              ];
+
+              home-manager.useGlobalPkgs = true;
+              home-manager.useUserPackages = true;
+
+              home-manager.sharedModules = [
+                plasma-manager.homeModules.plasma-manager
+              ];
+
+              home-manager.users.jwas = import ./home/shinjuku/home.nix;
+            }
+          ];
+        };
       };
   };
 }

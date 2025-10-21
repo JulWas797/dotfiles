@@ -10,7 +10,7 @@
       settings = {
         backend = "fastfetch";
         mode = "rgb";
-        preset = "rainbow";
+        preset = "femboy";
         light_dark = "dark";
         lightness = 0.56;
 
