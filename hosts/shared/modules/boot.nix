@@ -4,12 +4,12 @@
   boot = {
     kernelPackages = pkgs.linuxPackages_latest;
 
-    consoleLogLevel = 3;
+    consoleLogLevel = 0;
     initrd.verbose = false;
 
     plymouth = {
       enable = true;
-      theme = "tribar";
+      theme = "spinner";
     };
 
     kernelParams = [
