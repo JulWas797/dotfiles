@@ -5,6 +5,7 @@
     ./hardware-configuration.nix
     ./modules/audio.nix
     ./modules/tuned.nix
+    ./modules/sddm.nix
     ../shared/configuration.nix
   ];
 
