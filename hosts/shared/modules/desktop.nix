@@ -11,4 +11,5 @@
     xserver.enable = false;
     desktopManager.plasma6.enable = true;
   };
+
 }
