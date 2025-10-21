@@ -22,6 +22,10 @@ in
     enable = true;
     autosuggestion.enable = true;
 
+    shellAliases = {
+      upd = "cd ~/.dotfiles && nix flake update && sudo nixos-rebuild switch --flake .#$(hostname)";
+    };
+
     oh-my-zsh = {
       enable = true;
       theme = "agnoster-nix";
