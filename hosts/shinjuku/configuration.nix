@@ -8,5 +8,7 @@
     ../shared/configuration.nix
   ];
 
+  services.thermald.enable = true;
+
   networking.hostName = "shinjuku";
 }
