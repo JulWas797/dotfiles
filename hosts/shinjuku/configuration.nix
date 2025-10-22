@@ -14,7 +14,8 @@
     systemd-boot.consoleMode = "auto";
   };
   
-  services.thermald.enable = true;
+  # instead of thermald :)
+  services.throttled.enable = true;
 
   networking.hostName = "shinjuku";
 }
