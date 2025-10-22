@@ -1,4 +1,4 @@
-{ ... }:
+{ pkgs, ... }:
 
 {
   programs.plasma = {
@@ -9,8 +9,27 @@
       pointSize = 10;
     };
 
+    workspace = {
+      lookAndFeel = "org.kde.breezedark.desktop";
+      iconTheme = "Breeze-Dark";
+
+      cursor = {
+        theme = "breeze_cursors";
+        size = 24;
+      };
+    };
+
     configFile = {
       "kwinrc"."TabBox"."LayoutName" = "flipswitch";
+    };
+  };
+
+  gtk = {
+    enable = true;
+
+    theme = {
+      name = "Breeze";
+      package = pkgs.kdePackages.breeze-gtk;
     };
   };
 }

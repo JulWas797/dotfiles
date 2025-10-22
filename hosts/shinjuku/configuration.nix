@@ -15,5 +15,7 @@
   
   services.thermald.enable = true;
 
+  programs.plasma.workspace.wallpaper = "${./files/wallpaper.jpg}";
+
   networking.hostName = "shinjuku";
 }

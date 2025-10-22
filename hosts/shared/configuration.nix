@@ -67,7 +67,10 @@
     nerd-fonts.fira-code
   ];
 
-  services.fstrim.enable = true;
+  services = {
+    fstrim.enable = true;
+    libinput.touchpad.naturalScrolling = true;
+  };
 
   system.stateVersion = "25.05";
   nixpkgs.config.allowUnfree = true;
