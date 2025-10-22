@@ -8,8 +8,11 @@
     ../shared/configuration.nix
   ];
 
-  boot.loader.timeout = 0;
-
+  boot.loader = {
+    timeout = 0;
+    systemd-boot.consoleMode = "auto";
+  };
+  
   services.thermald.enable = true;
 
   networking.hostName = "shinjuku";
