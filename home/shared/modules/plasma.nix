@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ pkgs, lib, ... }:
 
 {
   programs.plasma = {
@@ -34,7 +34,7 @@
   };
 
   home.activation = {
-    cleangtk = ''
+    cleangtk = lib.hm.dag.entryBefore ["checkLinkTargets"] ''
       rm -f ~/.config/gtk-4.0/gtk.css
       rm -f ~/.config/gtk-4.0/settings.ini
       rm -f ~/.config/gtk-3.0/settings.ini
