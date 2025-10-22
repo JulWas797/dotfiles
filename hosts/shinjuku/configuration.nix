@@ -5,6 +5,7 @@
     ./hardware-configuration.nix
     ./modules/audio.nix
     ./modules/sddm.nix
+    ./modules/tlp.nix
     ../shared/configuration.nix
   ];
 
