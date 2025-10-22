@@ -8,6 +8,8 @@
     ../shared/configuration.nix
   ];
 
+  boot.loader.timeout = 0;
+
   services.thermald.enable = true;
 
   networking.hostName = "shinjuku";
