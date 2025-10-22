@@ -32,4 +32,13 @@
       package = pkgs.kdePackages.breeze-gtk;
     };
   };
+
+  home.activation = {
+    cleangtk = ''
+      rm -f ~/.config/gtk-4.0/gtk.css
+      rm -f ~/.config/gtk-4.0/settings.ini
+      rm -f ~/.config/gtk-3.0/settings.ini
+      rm -f ~/.gtkrc-2.0
+    '';
+  };
 }
