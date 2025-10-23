@@ -16,6 +16,6 @@
   
   # instead of thermald :)
   services.throttled.enable = true;
-
+  
   networking.hostName = "shinjuku";
 }
