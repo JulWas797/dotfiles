@@ -5,7 +5,7 @@
     ./hardware-configuration.nix
     ./modules/audio.nix
     ./modules/sddm.nix
-    ./modules/tlp.nix
+    ./modules/power.nix
     ../shared/configuration.nix
   ];
 
@@ -13,9 +13,6 @@
     timeout = 0;
     systemd-boot.consoleMode = "auto";
   };
-  
-  # instead of thermald :)
-  services.throttled.enable = true;
-  
+    
   networking.hostName = "shinjuku";
 }
