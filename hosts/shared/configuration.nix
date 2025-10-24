@@ -44,6 +44,7 @@
       jetbrains.jdk
 
       ayugram-desktop
+      btop
       haruna
       htop
       nixd

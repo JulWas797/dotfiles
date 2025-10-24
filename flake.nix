@@ -19,6 +19,8 @@
     };
 
     nix-vscode-extensions.url = "github:nix-community/nix-vscode-extensions";
+
+    nixos-hardware.url = "github:NixOS/nixos-hardware/master";
   };
 
   outputs =
@@ -27,6 +29,7 @@
       home-manager,
       plasma-manager,
       nix-vscode-extensions,
+      nixos-hardware,
       ...
     }:
 
@@ -38,22 +41,24 @@
 
           modules = [
             ./hosts/nyanix/configuration.nix
-
             home-manager.nixosModules.home-manager
+
 
             {
               nixpkgs.overlays = [
                 nix-vscode-extensions.overlays.default
               ];
 
-              home-manager.useGlobalPkgs = true;
-              home-manager.useUserPackages = true;
+              home-manager = {
+                useGlobalPkgs = true;
+                useUserPackages = true;
 
-              home-manager.sharedModules = [
-                plasma-manager.homeModules.plasma-manager
-              ];
+                sharedModules = [
+                  plasma-manager.homeModules.plasma-manager
+                ];
 
-              home-manager.users.jwas = import ./home/nyanix/home.nix;
+                users.jwas = import ./home/shinjuku/home.nix;
+              };
             }
           ];
         };
@@ -63,22 +68,24 @@
 
           modules = [
             ./hosts/shinjuku/configuration.nix
-
             home-manager.nixosModules.home-manager
+            nixos-hardware.nixosModules.lenovo-thinkpad-t480
 
             {
               nixpkgs.overlays = [
                 nix-vscode-extensions.overlays.default
               ];
 
-              home-manager.useGlobalPkgs = true;
-              home-manager.useUserPackages = true;
+              home-manager = {
+                useGlobalPkgs = true;
+                useUserPackages = true;
 
-              home-manager.sharedModules = [
-                plasma-manager.homeModules.plasma-manager
-              ];
+                sharedModules = [
+                  plasma-manager.homeModules.plasma-manager
+                ];
 
-              home-manager.users.jwas = import ./home/shinjuku/home.nix;
+                users.jwas = import ./home/shinjuku/home.nix;
+              };
             }
           ];
         };

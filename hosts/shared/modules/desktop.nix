@@ -12,4 +12,5 @@
     desktopManager.plasma6.enable = true;
   };
 
+  systemd.user.services."app-org.kde.kalendarac@autostart".enable = false; 
 }
