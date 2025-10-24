@@ -64,6 +64,14 @@
           install_url = "https://addons.mozilla.org/firefox/downloads/latest/1password-x-password-manager/latest.xpi";
           installation_mode = "force_installed";
         };
+        "chrome-mask@overengineer.dev" = {
+          install_url = "https://addons.mozilla.org/firefox/downloads/latest/chrome-mask/latest.xpi";
+          installation_mode = "force_installed";
+        };
+        "addon@darkreader.org" = {
+          install_url = "https://addons.mozilla.org/firefox/downloads/latest/darkreader/latest.xpi";
+          installation_mode = "force_installed";
+        };
       };
 
       ManualAppUpdateOnly = true;
@@ -83,7 +91,7 @@
         "dom.webnotifications.enabled" = false;
         "media.eme.enabled" = false;
         "media.gmp-widevinecdm.enabled" = false;
-        #"media.peerconnection.enabled" = false;
+        # "media.peerconnection.enabled" = false;
         "network.IDN_show_punycode" = true;
         "network.captive-portal-service.enabled" = false;
         "network.dns.disablePrefetch" = true;

@@ -19,6 +19,8 @@
       };
     };
 
+    krunner.position = "center";
+
     configFile = {
       "kwinrc"."TabBox"."LayoutName" = "flipswitch";
     };
