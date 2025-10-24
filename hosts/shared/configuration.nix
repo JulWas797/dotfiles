@@ -47,7 +47,9 @@
       btop
       haruna
       htop
+      imagemagick
       nixd
+      onlyoffice-bin
       tree
       vim
       wget
