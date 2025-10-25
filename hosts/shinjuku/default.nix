@@ -5,6 +5,8 @@
     ../../hardware/shinjuku
   ];
 
+  networking.hostName = "shinjuku";
+
   modules = {
     _1password.enable = true;
     kde.enable = true;

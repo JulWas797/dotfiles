@@ -5,6 +5,8 @@
     ../../hardware/nyanix
   ];
 
+  networking.hostName = "nyanix";
+
   modules = {
     _1password.enable = true;
     gaming.enable = true;
