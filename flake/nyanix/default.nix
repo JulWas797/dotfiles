@@ -26,7 +26,7 @@ inputs.nixpkgs.lib.nixosSystem {
           inputs.plasma-manager.homeModules.plasma-manager
         ];
 
-        users.jwas = ../../homes/jwas;
+        users.jwas = ../../homes/nyanix;
       };
     }
   ];
