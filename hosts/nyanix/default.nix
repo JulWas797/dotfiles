@@ -21,6 +21,7 @@
     plymouth.enable = true;
     sddm.enable = true;
     systemd-boot.enable = true;
+    tuned.enable = true;
     userapps.enable = true;
   };
 }
