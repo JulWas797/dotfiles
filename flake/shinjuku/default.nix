@@ -6,6 +6,7 @@ inputs.nixpkgs.lib.nixosSystem {
   };
 
   modules = [
+    ../../hosts/shinjuku
     ../../modules/base/shared
     ../../modules/base/shinjuku
     inputs.home-manager.nixosModules.home-manager
@@ -26,7 +27,7 @@ inputs.nixpkgs.lib.nixosSystem {
           inputs.plasma-manager.homeModules.plasma-manager
         ];
 
-        users.jwas = ../../homes/jwas;
+        users.jwas = ../../homes/shinjuku;
       };
     }
   ];
