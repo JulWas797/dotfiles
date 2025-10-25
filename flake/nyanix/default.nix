@@ -6,10 +6,11 @@ inputs.nixpkgs.lib.nixosSystem {
   };
 
   modules = [
+    ../../hosts/nyanix
     ../../modules/base/shared
     ../../modules/base/nyanix
     inputs.home-manager.nixosModules.home-manager
-    
+
     {
       home-manager = {
         nixpkgs.overlays = [ inputs.nix-vscode-extensions.overlays.default ];
