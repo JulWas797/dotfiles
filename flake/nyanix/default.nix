@@ -11,10 +11,10 @@ inputs.nixpkgs.lib.nixosSystem {
     ../../modules/base/nyanix
     inputs.home-manager.nixosModules.home-manager
 
-    {
-      home-manager = {
-        nixpkgs.overlays = [ inputs.nix-vscode-extensions.overlays.default ];
+    {      
+      nixpkgs.overlays = [ inputs.nix-vscode-extensions.overlays.default ];
 
+      home-manager = {
         extraSpecialArgs = {
           inherit inputs self;
         };

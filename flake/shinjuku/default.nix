@@ -13,9 +13,9 @@ inputs.nixpkgs.lib.nixosSystem {
     inputs.nixos-hardware.nixosModules.lenovo-thinkpad-t480
 
     {
-      home-manager = {
-        nixpkgs.overlays = [ inputs.nix-vscode-extensions.overlays.default ];
+      nixpkgs.overlays = [ inputs.nix-vscode-extensions.overlays.default ];
 
+      home-manager = {
         extraSpecialArgs = {
           inherit inputs self;
         };
