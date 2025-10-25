@@ -20,7 +20,7 @@
           support32Bit = true;
         };
 
-        extraConfig.pipewire.dac = lib.mkIf config.modules.audio.hifi { 
+        extraConfig.pipewire.dac = lib.mkIf config.modules.pipewire.hifi { 
           "context.properties" = {
             "default.clock.rate" = 48000;
             "default.clock.allowed-rates" = [ 44100 48000 192000 ]; 
