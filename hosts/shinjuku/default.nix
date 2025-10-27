@@ -12,6 +12,7 @@
     kde.enable = true;
     pipewire.enable = true;
     plymouth.enable = true;
+    power.enable = true;
     sddm.enable = true;
     systemd-boot.enable = true;
     userapps.enable = true;
