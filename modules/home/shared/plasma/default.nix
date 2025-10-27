@@ -27,6 +27,8 @@ in
 
       krunner.position = "center";
 
+      kscreenlocker.appearance.wallpaper = "${./resources/lockscreen.jpg}";
+
       configFile = {
         "kwinrc"."TabBox"."LayoutName" = "flipswitch";
       };

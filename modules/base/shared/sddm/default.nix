@@ -1,4 +1,4 @@
-{ lib, config, ... }:
+{ lib, config, pkgs, ... }:
 
 {
   options.modules.sddm = {
@@ -32,5 +32,12 @@
         };
       };
     };
+
+    environment.systemPackages = [
+      (pkgs.writeTextDir "share/sddm/themes/breeze/theme.conf.user" ''
+        [General]
+        background=${./resources/lockscreen.jpg}
+      '')
+    ];
   };
 }
