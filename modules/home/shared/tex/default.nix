@@ -5,7 +5,10 @@
 
   config = lib.mkIf config.modules.tex.enable {
     home.packages = with pkgs; [
-      texlive.scheme-small
+      (texlive.combine {
+        inherit (texlive) scheme-small;
+      })
+      
       (if config.modules.plasma.enable then kile else texstudio)
     ];
   };
