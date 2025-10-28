@@ -15,6 +15,7 @@
     konsole.enable = true;
     librewolf.enable = true;
     plasma.enable = true;
+    tex.enable = true;
     zsh.enable = true;
   };
 }

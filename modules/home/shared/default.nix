@@ -10,6 +10,7 @@
     ./konsole
     ./librewolf
     ./plasma
+    ./tex
     ./zsh
   ];
 
