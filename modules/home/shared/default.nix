@@ -9,6 +9,7 @@
     ./java-development
     ./konsole
     ./librewolf
+    ./octave
     ./plasma
     ./tex
     ./zsh
