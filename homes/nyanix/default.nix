@@ -19,6 +19,7 @@
     java-development.enable = true;
     konsole.enable = true;
     librewolf.enable = true;
+    octave.enable = true;
     plasma.enable = true;
     zsh.enable = true;
   };
