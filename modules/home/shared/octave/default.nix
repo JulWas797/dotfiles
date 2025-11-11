@@ -5,7 +5,7 @@
 
   config = lib.mkIf config.modules.octave.enable {
     home.packages = with pkgs; [
-      octave
+      octaveFull
     ];
   };
 }
