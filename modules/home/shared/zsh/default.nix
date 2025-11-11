@@ -23,6 +23,7 @@ in
   config = lib.mkIf config.modules.zsh.enable {
     programs.zsh = {
       enable = true;
+      enableCompletion = true;
       autosuggestion.enable = true;
 
       shellAliases = {
