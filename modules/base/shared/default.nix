@@ -14,6 +14,7 @@
   ];
 
   users.users.jwas = {
+    description = "Julian W";
     isNormalUser = true;
     extraGroups = [ "networkmanager" "wheel" ];
     shell = pkgs.zsh;
