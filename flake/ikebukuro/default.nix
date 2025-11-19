@@ -23,6 +23,10 @@ inputs.nixpkgs.lib.nixosSystem {
         useGlobalPkgs = true;
         useUserPackages = true;
 
+        sharedModules = [
+          inputs.plasma-manager.homeModules.plasma-manager
+        ];
+
         users.jwas = ../../homes/ikebukuro;
       };
     }
