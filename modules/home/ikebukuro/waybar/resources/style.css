@@ -1,0 +1,105 @@
+* {
+    font-family: "FiraCode Nerd Font";
+    font-size: 12px;
+}
+
+
+window#waybar {
+    background-color: #184956;
+    color: #cad8d9;
+}
+
+
+.modules-left {
+    background-color: #103c48;
+    padding: 0px 0px 0px 0px;
+}
+
+
+.modules-right {
+    background-color: #103c48;
+    padding: 0px 5px 0px 0px;
+}
+
+
+#scratchpad {
+    background-color: #103c48;
+    color: #cad8d9;
+    padding: 0px 9px 0px 9px;
+}
+
+
+#workspaces {}
+
+
+#workspaces button {
+    padding: 0px 11px 0px 11px;
+    min-width: 1px;
+    color: #72898f;
+}
+
+
+#workspaces button.focused {
+    padding: 0px 11px 0px 11px;
+    background-color: #184956;
+    color: #cad8d9;
+}
+
+
+#mode {
+    background-color: #900000;
+    color: #cad8d9;
+    padding: 0px 5px 0px 5px;
+    border: 1px solid #2f343a;
+}
+
+
+#window {
+    color: #cad8d9;
+    background-color: #184956;
+    padding: 0px 10px 0px 10px;
+}
+
+
+window#waybar.empty #window {
+    background-color: transparent;
+    color: transparent;
+}
+
+
+window#waybar.empty {
+    background-color: #103c48;
+}
+
+
+#network,
+#temperature,
+#backlight,
+#pulseaudio,
+#battery,
+#memory {
+    padding: 0px 15px 0px 15px;
+}
+
+#clock {
+    margin: 0px 15px 0px 15px;
+    color: #cad8d9;
+}
+
+#tray {
+    padding: 0px 8px 0px 5px;
+    margin: 0px 5px 0px 5px;
+}
+
+#battery.warning {
+    color: #ebc13d;
+}
+
+#battery.critical {
+    color: #ff665c;
+}
+
+
+#network.disconnected {
+    color: #ff665c;
+}

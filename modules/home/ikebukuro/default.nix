@@ -1,0 +1,9 @@
+{ ... }:
+
+{
+  imports = [
+    ./foot
+    ./sway
+    ./waybar
+  ];
+}

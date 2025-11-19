@@ -1,0 +1,9 @@
+{ ... }:
+
+{
+  imports = [
+    ./greetd
+    ./power
+    ./sway
+  ];
+}

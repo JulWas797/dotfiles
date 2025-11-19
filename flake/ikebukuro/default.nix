@@ -6,12 +6,13 @@ inputs.nixpkgs.lib.nixosSystem {
   };
 
   modules = [
-    ../../hosts/nyanix
+    ../../hosts/ikebukuro
     ../../modules/base/shared
-    ../../modules/base/nyanix
+    ../../modules/base/ikebukuro
     inputs.home-manager.nixosModules.home-manager
+    inputs.nixos-hardware.nixosModules.lenovo-thinkpad-x230
 
-    {      
+    {
       nixpkgs.overlays = [ inputs.nix-vscode-extensions.overlays.default ];
 
       home-manager = {
@@ -22,11 +23,7 @@ inputs.nixpkgs.lib.nixosSystem {
         useGlobalPkgs = true;
         useUserPackages = true;
 
-        sharedModules = [
-          inputs.plasma-manager.homeModules.plasma-manager
-        ];
-
-        users.jwas = ../../homes/nyanix;
+        users.jwas = ../../homes/ikebukuro;
       };
     }
   ];

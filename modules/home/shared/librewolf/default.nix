@@ -101,6 +101,8 @@
           "network.predictor.enabled" = false;
           "network.prefetch-next" = false;
           "widget.use-xdg-desktop-portal.file-picker" = 1;
+        } // lib.optionalAttrs config.modules.sway.enable {
+          "browser.tabs.inTitlebar" = 0;
         };
       };
 
