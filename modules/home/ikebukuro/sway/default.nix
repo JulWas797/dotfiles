@@ -10,6 +10,7 @@
 
       config = {
         modifier = "Mod4";
+        defaultWorkspace = 1;
         gaps.inner = 5;
         window.titlebar = false;
 
