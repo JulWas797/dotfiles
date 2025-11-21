@@ -8,7 +8,6 @@
       grim
       mako
       pavucontrol
-      pcmanfm-qt
       slurp
       wl-clipboard      
       zathura

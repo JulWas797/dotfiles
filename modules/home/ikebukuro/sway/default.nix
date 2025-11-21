@@ -31,7 +31,6 @@
           "XF86AudioMicMute" = "exec 'pactl set-source-mute @DEFAULT_SOURCE@ toggle";
           "Mod4+d" = "exec 'wmenu-run -n \"adbcbc\" -N \"103c48\" -s \"cad8d9\" -S \"184956\" -i'";
           "Mod4+b" = "exec librewolf";
-          "Mod4+f" = "exec pcmanfm-qt";
         };
       };
     };    
