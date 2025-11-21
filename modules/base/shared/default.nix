@@ -9,6 +9,7 @@
     ./pipewire
     ./plymouth
     ./sddm
+    ./sway
     ./systemd-boot
     ./userapps
   ];

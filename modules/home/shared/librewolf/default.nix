@@ -71,6 +71,11 @@
             install_url = "https://addons.mozilla.org/firefox/downloads/latest/darkreader/latest.xpi";
             installation_mode = "force_installed";
           };
+        } // lib.optionalAttrs config.modules.sway.enable {
+          "{622c6589-da63-433b-ac8e-c178a93febbd}" = {
+            install_url = "https://addons.mozilla.org/firefox/downloads/latest/selenized/latest.xpi";
+            installation_mode = "force_installed";
+          };
         };
 
         ManualAppUpdateOnly = true;
@@ -103,6 +108,7 @@
           "widget.use-xdg-desktop-portal.file-picker" = 1;
         } // lib.optionalAttrs config.modules.sway.enable {
           "browser.tabs.inTitlebar" = 0;
+          "extensions.activeThemeID" = "{622c6589-da63-433b-ac8e-c178a93febbd}";
         };
       };
 

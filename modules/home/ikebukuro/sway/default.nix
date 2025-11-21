@@ -10,9 +10,11 @@
 
       config = {
         modifier = "Mod4";
-        defaultWorkspace = 1;
+        defaultWorkspace = "workspace number 1";
         gaps.inner = 5;
         window.titlebar = false;
+
+        input."*".xkb_layout = "pl";
 
         bars = lib.mkIf config.modules.waybar.enable [
           { 
@@ -28,8 +30,10 @@
           "XF86AudioMute" = "exec 'pactl set-sink-mute @DEFAULT_SINK@ toggle";
           "XF86AudioMicMute" = "exec 'pactl set-source-mute @DEFAULT_SOURCE@ toggle";
           "Mod4+d" = "exec 'wmenu-run -n \"adbcbc\" -N \"103c48\" -s \"cad8d9\" -S \"184956\" -i'";
+          "Mod4+b" = "exec librewolf";
+          "Mod4+f" = "exec pcmanfm-qt";
         };
       };
-    };
+    };    
   };
 }
