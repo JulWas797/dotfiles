@@ -11,6 +11,7 @@
     ./librewolf
     ./octave
     ./plasma
+    ./sway
     ./tex
     ./zsh
   ];
