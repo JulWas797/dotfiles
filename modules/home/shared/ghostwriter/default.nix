@@ -8,7 +8,7 @@
       enable = true;
 
       font = {
-        family = "FiraCode Nerd Font";
+        family = "BlexMono Nerd Font";
         pointSize = 12;
       };
     };

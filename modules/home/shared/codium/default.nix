@@ -13,7 +13,7 @@
           chadalen.vscode-jetbrains-icon-theme
           formulahendry.code-runner
           jnoortheen.nix-ide
-          santoso-wijaya.helios-selene
+          enkia.tokyo-night
         ];
 
         userSettings = {
@@ -22,8 +22,7 @@
           "editor.fontFamily" = "'FiraCode Nerd Font', 'monospace', monospace";
           "nix.enableLanguageServer" = true;
           "nix.serverPath" = "nixd";
-        } // lib.optionalAttrs config.modules.sway.enable {
-          "workbench.colorTheme" = "Selene Selenized Dark";
+          "workbench.colorTheme" = "Tokyo Night";
         };
       };
     };

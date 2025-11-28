@@ -8,20 +8,20 @@
       enable = true;
       defaultProfile = "Nyanix";
 
-      customColorSchemes.sweet =
+      customColorSchemes.tokyonight =
         let
-          sweet-kde-theme = pkgs.fetchFromGitHub {
-            repo = "Sweet";
-            owner = "EliverLara";
-            rev = "8877bf54da60b0cdc3f18da43a2aa8d3dd5420f2";
-            hash = "sha256-WjmnHBd3icUCBKOCBsOMzk3eTMvT0MnykrIWwye+snA=";
+          tokyo-night-git = pkgs.fetchFromGitHub {
+            repo = "tokyonight.nvim";
+            owner = "folke";
+            rev = "5da1b76e64daf4c5d410f06bcb6b9cb640da7dfd";
+            hash = "sha256-4zfkv3egdWJ/GCWUehV0MAIXxsrGT82Wd1Qqj1SCGOk=";
           };
         in
-      "${sweet-kde-theme}/kde/konsole/Sweet-Ambar-Blue.colorscheme";
+      "${tokyo-night-git}/extras/konsole/tokyonight_night.colorscheme";
 
       profiles = {
         "Nyanix" = {
-          colorScheme = "sweet";
+          colorScheme = "tokyonight";
           
           font = {
             name = "FiraCode Nerd Font";

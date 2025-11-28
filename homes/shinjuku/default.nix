@@ -5,7 +5,7 @@
     ../../modules/home
   ];
 
-  programs.plasma.workspace.wallpaper = "${./resources/wallpaper.jpg}";
+  programs.plasma.workspace.wallpaper = "${./resources/wallpaper.png}";
 
   modules = {
     codium.enable = true;

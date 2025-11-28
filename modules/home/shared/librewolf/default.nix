@@ -71,9 +71,8 @@
             install_url = "https://addons.mozilla.org/firefox/downloads/latest/darkreader/latest.xpi";
             installation_mode = "force_installed";
           };
-        } // lib.optionalAttrs config.modules.sway.enable {
-          "{622c6589-da63-433b-ac8e-c178a93febbd}" = {
-            install_url = "https://addons.mozilla.org/firefox/downloads/latest/selenized/latest.xpi";
+          "{4520dc08-80f4-4b2e-982a-c17af42e5e4d}" = {
+            install_url = "https://addons.mozilla.org/firefox/downloads/latest/tokyo-night-milav/latest.xpi";
             installation_mode = "force_installed";
           };
         };
@@ -106,9 +105,9 @@
           "network.predictor.enabled" = false;
           "network.prefetch-next" = false;
           "widget.use-xdg-desktop-portal.file-picker" = 1;
+          "extensions.activeThemeID" = "{4520dc08-80f4-4b2e-982a-c17af42e5e4d}";
         } // lib.optionalAttrs config.modules.sway.enable {
           "browser.tabs.inTitlebar" = 0;
-          "extensions.activeThemeID" = "{622c6589-da63-433b-ac8e-c178a93febbd}";
         };
       };
 

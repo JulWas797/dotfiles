@@ -1,12 +1,20 @@
 { lib, config, pkgs, ... }:
 
-let 
-  face = ./resources/.face;
-in
 {
   options.modules.plasma.enable = lib.mkEnableOption "Enable Plasma";
 
   config = lib.mkIf config.modules.plasma.enable {
+    xdg.dataFile."color-schemes/TokyoNight.colors".source = 
+      let
+        tokyo-night-git = pkgs.fetchFromGitHub {
+          owner = "Jayy-Dev";
+          repo = "Plasma-Tokyo-Night";
+          rev = "1f2f04a2ad7c343b5ca54e27fadfae861fdaf88b";
+          hash = "sha256-EdlMULeyiwfXw8qL47oWejg0ODDWr5GgK2aFpbPj+eM=";
+        };
+      in 
+    "${tokyo-night-git}/colorscheme/TokyoNight.colors";
+
     programs.plasma = {
       enable = true;
 
@@ -18,6 +26,7 @@ in
       workspace = {
         lookAndFeel = "org.kde.breezedark.desktop";
         iconTheme = "breeze-dark";
+        colorScheme = "TokyoNight";
 
         cursor = {
           theme = "breeze_cursors";
