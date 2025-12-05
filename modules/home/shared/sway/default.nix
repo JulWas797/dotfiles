@@ -15,6 +15,7 @@
         window.titlebar = false;
 
         input."*".xkb_layout = "pl";
+        output."*".bg = "${./resources/wallpaper.png} fill";
 
         bars = lib.mkIf config.modules.waybar.enable [
           { 
@@ -29,7 +30,7 @@
           "XF86AudioLowerVolume" = "exec 'pactl set-sink-volume @DEFAULT_SINK@ -5%'";
           "XF86AudioMute" = "exec 'pactl set-sink-mute @DEFAULT_SINK@ toggle";
           "XF86AudioMicMute" = "exec 'pactl set-source-mute @DEFAULT_SOURCE@ toggle";
-          "Mod4+d" = "exec 'wmenu-run -n \"adbcbc\" -N \"103c48\" -s \"cad8d9\" -S \"184956\" -i'";
+          "Mod4+d" = "exec 'wmenu-run -n \"a9b1d6\" -N \"1a1b26\" -s \"c0caf5\" -S \"15161e\" -i'";
           "Mod4+b" = "exec librewolf";
         };
       };
