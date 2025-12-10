@@ -11,26 +11,29 @@
         main.font = "FiraCode Nerd Font:size=9";
           
         colors = {
-          background = "103c48";
-          foreground = "adbcbc";
+          foreground = "c0caf5";
+          background = "1a1b26";
 
-          regular0 = "184956";
-          regular1 = "fa5750";
-          regular2 = "75b938";
-          regular3 = "dbb32d";
-          regular4 = "4695f7";
-          regular5 = "f275be";
-          regular6 = "41c7b9";
-          regular7 = "72898f";
+          regular0 = "15161E";
+          regular1 = "f7768e";
+          regular2 = "9ece6a";
+          regular3 = "e0af68";
+          regular4 = "7aa2f7";
+          regular5 = "bb9af7";
+          regular6 = "7dcfff";
+          regular7 = "a9b1d6";
 
-          bright0 = "2d5b69";
-          bright1 = "ff665c";
-          bright2 = "84c747";
-          bright3 = "ebc13d";
-          bright4 = "58a3ff";
-          bright5 = "ff84cd";
-          bright6 = "53d6c7";
-          bright7 = "cad8d9";
+          bright0 = "414868";
+          bright1 = "f7768e";
+          bright2 = "9ece6a";
+          bright3 = "e0af68";
+          bright4 = "7aa2f7";
+          bright5 = "bb9af7";
+          bright6 = "7dcfff";
+          bright7 = "c0caf5";
+
+          dim0 = "ff9e64";
+          dim1 = "db4b4b";
         };
       };
     };

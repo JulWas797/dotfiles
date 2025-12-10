@@ -5,26 +5,26 @@
 
 
 window#waybar {
-    background-color: #184956;
-    color: #cad8d9;
+    background-color: #15161E;
+    color: #c0caf5;
 }
 
 
 .modules-left {
-    background-color: #103c48;
+    background-color: #1a1b26;
     padding: 0px 0px 0px 0px;
 }
 
 
 .modules-right {
-    background-color: #103c48;
+    background-color: #1a1b26;
     padding: 0px 5px 0px 0px;
 }
 
 
 #scratchpad {
-    background-color: #103c48;
-    color: #cad8d9;
+    background-color: #1a1b26;
+    color: #c0caf5;
     padding: 0px 9px 0px 9px;
 }
 
@@ -35,28 +35,28 @@ window#waybar {
 #workspaces button {
     padding: 0px 11px 0px 11px;
     min-width: 1px;
-    color: #72898f;
+    color: #414868;
 }
 
 
 #workspaces button.focused {
     padding: 0px 11px 0px 11px;
-    background-color: #184956;
-    color: #cad8d9;
+    background-color: #15161E;
+    color: #c0caf5;
 }
 
 
 #mode {
     background-color: #900000;
-    color: #cad8d9;
+    color: #c0caf5;
     padding: 0px 5px 0px 5px;
-    border: 1px solid #2f343a;
+    border: 1px solid #414868;
 }
 
 
 #window {
-    color: #cad8d9;
-    background-color: #184956;
+    color: #c0caf5;
+    background-color: #15161E;
     padding: 0px 10px 0px 10px;
 }
 
@@ -68,7 +68,7 @@ window#waybar.empty #window {
 
 
 window#waybar.empty {
-    background-color: #103c48;
+    background-color: #1a1b26;
 }
 
 
@@ -83,7 +83,7 @@ window#waybar.empty {
 
 #clock {
     margin: 0px 15px 0px 15px;
-    color: #cad8d9;
+    color: #c0caf5;
 }
 
 #tray {
@@ -92,14 +92,14 @@ window#waybar.empty {
 }
 
 #battery.warning {
-    color: #ebc13d;
+    color: #e0af68;
 }
 
 #battery.critical {
-    color: #ff665c;
+    color: #f7768e;
 }
 
-
+ 
 #network.disconnected {
-    color: #ff665c;
+    color: #f7768e;
 }
