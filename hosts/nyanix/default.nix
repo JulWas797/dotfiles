@@ -19,6 +19,7 @@
     };
 
     plymouth.enable = true;
+    podman.enable = true;
     sddm.enable = true;
     systemd-boot.enable = true;
     tuned.enable = true;
