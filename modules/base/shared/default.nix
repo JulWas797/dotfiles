@@ -8,6 +8,7 @@
     ./kde
     ./pipewire
     ./plymouth
+    ./podman
     ./sddm
     ./sway
     ./systemd-boot
@@ -56,12 +57,19 @@
     git.enable = true;
   };
 
-  environment.systemPackages = with pkgs; [
-    htop
-    tree
-    vim
-    wget
-  ];
+  environment = {
+    systemPackages = with pkgs; [
+      htop
+      tree
+      vim
+      wget
+    ];
+
+    sessionVariables = rec {
+      XDG_BIN_HOME = "$HOME/.local/bin";
+      PATH = [ "${XDG_BIN_HOME}" ];
+    };
+  };
 
   networking = {
     networkmanager.enable = true;

@@ -9,7 +9,7 @@
     ./java-development
     ./konsole
     ./librewolf
-    ./octave
+    ./matlab
     ./plasma
     ./sway
     ./tex

@@ -14,7 +14,7 @@
     ghostwriter.enable = true;
     konsole.enable = true;
     librewolf.enable = true;
-    octave.enable = true;
+    matlab.enable = true;
     plasma.enable = true;
     tex.enable = true;
     zsh.enable = true;
