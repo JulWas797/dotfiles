@@ -13,6 +13,7 @@
     ./plasma
     ./sway
     ./tex
+    ./vencord
     ./zsh
   ];
 
