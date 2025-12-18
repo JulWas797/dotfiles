@@ -28,7 +28,17 @@ in
       autosuggestion.enable = true;
 
       shellAliases = {
-        upd = "cd ~/.dotfiles && nix flake update && sudo nixos-rebuild switch --flake .#$(hostname)";
+        cdd = "cd ~/.dotfiles";
+        nfu = "nix flake update";
+        nrs = "sudo nixos-rebuild switch --flake .#$(hostname)";
+        upd = "cdd && nfu && nrs";
+        cds = "cdd && cd ./secrets";
+        shn = "shutdown now";  
+        ff = "fastfetch";
+        hf = "hyfetch";
+        idea = "idea-ultimate";
+        tlac = "sudo tlp ac";
+        tlb = "sudo tlp bat";
       };
 
       oh-my-zsh = {
