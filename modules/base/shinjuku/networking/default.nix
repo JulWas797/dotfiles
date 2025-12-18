@@ -1,98 +1,92 @@
 { lib, config, ... }:
 
-#TODO: fix
-
 let
-  networks = ../../../../secrets/networks;
+  networksRoot = ../../../../secrets/networks;
 
-  mkWifi = name: {
-    sops = {
-      secrets = 
-        let 
-          sopsPath = "${networks}/${name}.yaml";
-        in 
-      {
-        "${name}/ssid" = { sopsFile = sopsPath; key = "ssid"; };
-        "${name}/psk"  = { sopsFile = sopsPath; key = "psk"; };
-      };
+  secret = path: key: { 
+    sopsFile = path; 
+    inherit key; 
+  };
 
-      templates."NetworkManager/system-connections/${name}.nmconnection" = {
-        path = "/run/NetworkManager/system-connections/${name}.nmconnection";
-        mode = "0600";
-        content = ''
-          [connection]
-          id=${config.sops.placeholder."${name}/ssid"}
-          type=wifi
-          autoconnect=true
+  getNetworks = dir: 
+    lib.mapAttrsToList (
+      file: _: {
+        name = lib.removeSuffix ".yaml" file;
+        path = "${dir}/${file}";
+      }
+    ) (lib.filterAttrs (n: v: v == "regular" && lib.hasSuffix ".yaml" n) (builtins.readDir dir));
 
-          [wifi]
-          mode=infrastructure
-          ssid=${config.sops.placeholder."${name}/ssid"}
+  pskNetworks = getNetworks "${networksRoot}/psk";
+  eapNetworks = getNetworks "${networksRoot}/eap";
 
-          [wifi-security]
-          auth-alg=open
-          key-mgmt=wpa-psk
-          psk=${config.sops.placeholder."${name}/psk"}
+  mkSecretSet = keys: nets:
+    lib.mergeAttrsList (map ({ name, path }:
+      lib.listToAttrs (map (key: {
+        name = "${name}/${key}";
+        value = secret path key;
+      }) keys)
+    ) nets);
 
-          [ipv4]
-          method=auto
-        '';
-      };
+  pskSecrets = mkSecretSet [ "ssid" "psk" ] pskNetworks;
+  eapSecrets = mkSecretSet [ "ssid" "identity" "password" ] eapNetworks;
+
+  mkConnection = name: type: content: {
+    "NetworkManager/system-connections/${name}.nmconnection" = {
+      path = "/run/NetworkManager/system-connections/${name}.nmconnection";
+      mode = "0600";
+      inherit content;
     };
   };
+
+  pskTemplates = lib.mergeAttrsList (map ({ name, ... }: mkConnection name "psk" ''
+    [connection]
+    id=${config.sops.placeholder."${name}/ssid"}
+    type=wifi
+    autoconnect=true
+
+    [wifi]
+    mode=infrastructure
+    ssid=${config.sops.placeholder."${name}/ssid"}
+
+    [wifi-security]
+    auth-alg=open
+    key-mgmt=wpa-psk
+    psk=${config.sops.placeholder."${name}/psk"}
+
+    [ipv4]
+    method=auto
+  '') pskNetworks);
+
+  eapTemplates = lib.mergeAttrsList (map ({ name, ... }: mkConnection name "eap" ''
+    [connection]
+    id=${config.sops.placeholder."${name}/ssid"}
+    type=wifi
+    autoconnect=true
+
+    [wifi]
+    mode=infrastructure
+    ssid=${config.sops.placeholder."${name}/ssid"}
+
+    [wifi-security]
+    key-mgmt=wpa-eap
+
+    [802-1x]
+    eap=peap;
+    phase2-auth=mschapv2
+    identity=${config.sops.placeholder."${name}/identity"}
+    password=${config.sops.placeholder."${name}/password"}
+
+    [ipv4]
+    method=auto
+  '') eapNetworks);
 in
 {
   options.modules.networking.enable = lib.mkEnableOption "Networking";
 
-  config = lib.mkIf config.modules.networking.enable (lib.mkMerge [
-    {
-      networking.networkmanager.enable = true;
+  config = lib.mkIf config.modules.networking.enable {
+    networking.networkmanager.enable = true;
 
-      sops.secrets = 
-        let
-          eduroam = ../../../../secrets/networks/eduroam.yaml;
-        in 
-      {
-        "eduroam/identity" = { sopsFile = eduroam; key = "identity"; };
-        "eduroam/password" = { sopsFile = eduroam; key = "password"; };
-      };
-
-      sops.templates = 
-        let 
-          wifiName = "eduroam";
-          nmPath = "NetworkManager/system-connections/${wifiName}.nmconnection";
-        in 
-      {
-        ${nmPath} = {
-          path = "/run/${nmPath}";
-          mode = "0600";
-          content = ''
-            [connection]
-            id=${wifiName}
-            type=wifi
-            autoconnect=true
-
-            [wifi]
-            mode=infrastructure
-            ssid=${wifiName}
-
-            [wifi-security]
-            key-mgmt=wpa-eap
-
-            [802-1x]
-            eap=peap;
-            identity=${config.sops.placeholder."${wifiName}/identity"}
-            password=${config.sops.placeholder."${wifiName}/password"}
-            phase2-auth=mschapv2
-
-            [ipv4]
-            method=auto
-          '';
-        };
-      };
-    }
-
-    (mkWifi "home5g")
-    (mkWifi "hotspot")
-  ]);
+    sops.secrets = pskSecrets // eapSecrets;
+    sops.templates = pskTemplates // eapTemplates;
+  };
 }
