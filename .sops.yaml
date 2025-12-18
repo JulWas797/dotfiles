@@ -1,0 +1,7 @@
+keys:
+  - &shinjuku age1qj9m662rm3zkq4tuhnsyly5uafvchduye26qak9pqwm7lzf2lqrql2twzc
+creation_rules:
+  - path_regex: secrets/.*\.ya?ml$
+    key_groups:
+    - age:
+      - *shinjuku

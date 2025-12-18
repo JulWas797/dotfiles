@@ -11,6 +11,7 @@ inputs.nixpkgs.lib.nixosSystem {
     ../../modules/base/shinjuku
     inputs.home-manager.nixosModules.home-manager
     inputs.nixos-hardware.nixosModules.lenovo-thinkpad-t480
+    inputs.sops-nix.nixosModules.sops
 
     {
       nixpkgs.overlays = [ inputs.nix-vscode-extensions.overlays.default ];
@@ -25,6 +26,7 @@ inputs.nixpkgs.lib.nixosSystem {
 
         sharedModules = [
           inputs.plasma-manager.homeModules.plasma-manager
+          inputs.sops-nix.homeManagerModules.sops
         ];
 
         users.jwas = ../../homes/shinjuku;

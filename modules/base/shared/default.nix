@@ -60,6 +60,7 @@
   environment = {
     systemPackages = with pkgs; [
       htop
+      sops
       tree
       vim
       wget
