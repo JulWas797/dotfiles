@@ -30,6 +30,8 @@
         disableMinSize = true;
 
         plugins = {
+          AccountPanelServerProfile.enabled = true;
+          
           AnonymiseFileNames = {
             enabled = true;
             anonymiseByDefault = false;
@@ -41,8 +43,10 @@
           FakeNitro.enabled = true;
           FixYoutubeEmbeds.enabled = true;
           ForceOwnerCrown.enabled = true;
+          FriendsSince.enabled = true;
           ImageFilename.enabled = true;
           ImageZoom.enabled = true;
+          MemberCount.enabled = true;
           MentionAvatars.enabled = true;
           MessageLinkEmbeds.enabled = true;
 
@@ -62,6 +66,7 @@
           Translate.enabled = true;
           UserVoiceShow.enabled = true;
           ValidReply.enabled = true;
+          ValidUser.enabled = true;
           VoiceMessages.enabled = true;
           YoutubeAdblock.enabled = true;
         };
