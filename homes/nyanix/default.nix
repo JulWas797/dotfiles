@@ -21,6 +21,7 @@
     librewolf.enable = true;
     matlab.enable = true;
     plasma.enable = true;
+    vencord.enable = true;
     zsh.enable = true;
   };
 }
