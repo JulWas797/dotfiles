@@ -1,7 +1,11 @@
 keys:
   - &shinjuku age1qj9m662rm3zkq4tuhnsyly5uafvchduye26qak9pqwm7lzf2lqrql2twzc
+  - &nyanix age16q3yevap8wt2yl6y0t2eq3vrp7d04xzs2f7dvvarmy3nu3wqpsjqgc8u7q
+  - &ikebukuro age1w486cu2ntujvmukcteeeysz98ngrxz4l5wduvpe7cw858wea4gqqxvasae
 creation_rules:
   - path_regex: secrets/.*\.ya?ml$
     key_groups:
     - age:
       - *shinjuku
+      - *nyanix
+      - *ikebukuro

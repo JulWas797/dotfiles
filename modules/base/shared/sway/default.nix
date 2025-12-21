@@ -13,17 +13,9 @@
       zathura
     ];
 
-    fonts = {
-      packages = with pkgs; [
-        noto-fonts
-        noto-fonts-emoji
-        font-awesome
-      ];
-
-      fontconfig.defaultFonts = {
-        serif = [ "Noto Serif" ];
-        sansSerif = [ "Noto Sans" ];
-      };
+    fonts.fontconfig.defaultFonts = {
+      serif = [ "Noto Serif" ];
+      sansSerif = [ "Noto Sans" ];
     };
 
     programs = {
@@ -38,7 +30,6 @@
     users.users.jwas.extraGroups = [ "video" ];
 
     security.polkit.enable = true;
-
     services.gnome.gnome-keyring.enable = true;
   };
 }

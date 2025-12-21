@@ -119,6 +119,8 @@
         } // lib.optionalAttrs config.modules.sway.enable {
           "browser.tabs.inTitlebar" = 0;
         };
+
+        SearchEngines.Default = "StartPage";
       };
 
       nativeMessagingHosts = lib.mkIf config.modules.plasma.enable [ pkgs.kdePackages.plasma-browser-integration ];

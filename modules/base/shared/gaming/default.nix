@@ -1,4 +1,4 @@
-{ lib, config, ... }:
+{ lib, config, pkgs, ... }:
 
 {
   options.modules.gaming.enable = lib.mkEnableOption "Enable gaming-related stuff";
@@ -12,6 +12,10 @@
         remotePlay.openFirewall = true;
         dedicatedServer.openFirewall = true;
         localNetworkGameTransfers.openFirewall = true;
+
+        extraCompatPackages = with pkgs; [
+          proton-ge-bin
+        ];
       };
     };
   };

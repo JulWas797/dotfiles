@@ -9,6 +9,7 @@
 
   modules = {
     _1password.enable = true;
+    fonts.enable = true;
     kde.enable = true;
     networking.enable = true;
     pipewire.enable = true;

@@ -2,22 +2,15 @@
 
 # TODO: MOVE OUT TO HOME MANAGER!
 {
-  options.modules.userapps.enable = lib.mkEnableOption "Enable user apps and fonts";
+  options.modules.userapps.enable = lib.mkEnableOption "User apps";
 
   config = lib.mkIf config.modules.userapps.enable {
-    environment = {
-      systemPackages = with pkgs; [
-        ayugram-desktop
-        btop
-        imagemagick
-        nixd
-        onlyoffice-bin
-      ];  
-    };
-
-    fonts.packages = with pkgs; [
-      helvetica-neue-lt-std
-      nerd-fonts.fira-code
-    ];
+    environment.systemPackages = with pkgs; [
+      ayugram-desktop
+      btop
+      imagemagick
+      nixd
+      onlyoffice-desktopeditors
+    ];  
   };
 }

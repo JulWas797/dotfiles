@@ -9,6 +9,7 @@
 
   modules = {
     _1password.enable = true;
+    fonts.enable = true;
     greetd.enable = true;
     pipewire.enable = true;
     power.enable = true;

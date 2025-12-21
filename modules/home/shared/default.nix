@@ -13,6 +13,7 @@
     ./plasma
     ./sway
     ./tex
+    ./torrenting
     ./vencord
     ./zsh
   ];
@@ -20,7 +21,7 @@
   home = {
     username = "jwas";
     homeDirectory = "/home/jwas";
-    stateVersion = "25.05";
+    stateVersion = "25.11";
 
     sessionVariables = {
       MOZ_ENABLE_WAYLAND = 1;
@@ -30,7 +31,10 @@
 
   programs.git = {
     enable = true;
-    userEmail="51297298+JulWas797@users.noreply.github.com";
-    userName="JulWas797";
+
+    settings.user = {
+      email = "51297298+JulWas797@users.noreply.github.com";
+      name = "JulWas797";
+    };
   };
 }

@@ -5,13 +5,8 @@
 
   config = lib.mkIf config.modules.java-development.enable {
     home = {
-      packages = [ 
-        (pkgs.buildFHSEnv {
-          pname = "idea-ultimate";
-          inherit (pkgs.jetbrains.idea-ultimate) version meta;
-          targetPkgs = pkgs: [ pkgs.jetbrains.idea-ultimate ];
-          runScript = "idea-ultimate";
-        })  
+      packages = [
+        pkgs.jetbrains.idea
       ];
 
       file = {

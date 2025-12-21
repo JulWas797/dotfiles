@@ -3,6 +3,7 @@
 {
   imports = [
     ./_1password
+    ./fonts
     ./gaming
     ./java
     ./kde
@@ -55,6 +56,7 @@
   programs = {
     zsh.enable = true;
     git.enable = true;
+    nix-ld.enable = true;
   };
 
   environment = {
@@ -79,7 +81,7 @@
 
   boot.kernelPackages = pkgs.linuxPackages_latest;
 
-  system.stateVersion = "25.05";
+  system.stateVersion = "25.11";
   nixpkgs.config.allowUnfree = true;
 
   nix = {

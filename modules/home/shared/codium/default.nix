@@ -10,10 +10,11 @@
 
       profiles.default = {
         extensions = with pkgs.vscode-marketplace; [
-          chadalen.vscode-jetbrains-icon-theme
+          be5invis.vscode-icontheme-nomo-dark
           formulahendry.code-runner
           jnoortheen.nix-ide
           enkia.tokyo-night
+          eamodio.gitlens
         ];
 
         userSettings = {
