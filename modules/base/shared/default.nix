@@ -7,10 +7,12 @@
     ./gaming
     ./java
     ./kde
+    ./networking
     ./pipewire
     ./plymouth
     ./podman
     ./sddm
+    ./sops
     ./sway
     ./systemd-boot
     ./userapps
@@ -74,10 +76,7 @@
     };
   };
 
-  networking = {
-    networkmanager.enable = true;
-    firewall.enable = true;
-  };
+  networking.firewall.enable = true;
 
   boot.kernelPackages = pkgs.linuxPackages_latest;
 

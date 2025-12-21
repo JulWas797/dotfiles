@@ -17,14 +17,8 @@
     podman.enable = true;
     power.enable = true;
     sddm.enable = true;
+    sops.enable = true;
     systemd-boot.enable = true;
     userapps.enable = true;
-  };
-
-  sops = {
-    age.keyFile = "/home/jwas/.config/sops/age/keys.txt";
-
-    defaultSopsFormat = "yaml";
-    defaultSopsFile = ../../secrets/default.yaml;
   };
 }
