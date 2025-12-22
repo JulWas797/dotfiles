@@ -56,7 +56,11 @@
   };
   
   programs = {
-    zsh.enable = true;
+    zsh = {
+      enableGlobalCompInit = false;
+      enable = true;  
+    };
+
     git.enable = true;
     nix-ld.enable = true;
   };

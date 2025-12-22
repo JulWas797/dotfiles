@@ -36,7 +36,6 @@ in
         shn = "shutdown now";  
         ff = "fastfetch";
         hf = "hyfetch";
-        idea = "idea-ultimate";
         tlac = "sudo tlp ac";
         tlb = "sudo tlp bat";
       };
