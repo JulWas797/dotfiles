@@ -16,6 +16,7 @@
     konsole.enable = true;
     librewolf.enable = true;
     matlab.enable = true;
+    sops.enable = true;
     plasma.enable = true;
     tex.enable = true;
     vencord.enable = true;

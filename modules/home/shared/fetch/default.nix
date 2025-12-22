@@ -24,6 +24,7 @@
           };
 
           distro = null;
+          pride_month_disable = true;
         };
       };
     };

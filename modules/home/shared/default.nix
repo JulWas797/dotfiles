@@ -11,6 +11,7 @@
     ./librewolf
     ./matlab
     ./plasma
+    ./sops
     ./sway
     ./tex
     ./torrenting
