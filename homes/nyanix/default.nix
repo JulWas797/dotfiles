@@ -18,8 +18,11 @@
     java-development.enable = true;
     konsole.enable = true;
     librewolf.enable = true;
+    onlyoffice.enable = true;
+    sops.enable = true;
     plasma.enable = true;
     torrenting.enable = true;
+    userapps.enable = true;
     vencord.enable = true;
     zsh.enable = true;
   };

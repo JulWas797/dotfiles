@@ -15,7 +15,6 @@
     ./sops
     ./sway
     ./systemd-boot
-    ./userapps
   ];
 
   users.users.jwas = {
@@ -53,6 +52,7 @@
 
     fstrim.enable = true;
     libinput.touchpad.naturalScrolling = true;
+    
   };
   
   programs = {

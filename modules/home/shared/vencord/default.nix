@@ -1,4 +1,4 @@
-{ lib, config, pkgs, ... }:
+{ lib, config, ... }:
 
 {
   options.modules.vencord.enable = lib.mkEnableOption "Vencord";

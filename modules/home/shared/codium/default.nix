@@ -27,5 +27,7 @@
         };
       };
     };
+
+    home.packages = [ pkgs.nixd ];
   }; 
 }

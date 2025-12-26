@@ -1,4 +1,4 @@
-{ ... }:
+{ pkgs, ... }:
 
 {
   imports = [
@@ -10,11 +10,13 @@
     ./konsole
     ./librewolf
     ./matlab
+    ./onlyoffice
     ./plasma
     ./sops
     ./sway
     ./tex
     ./torrenting
+    ./userapps
     ./vencord
     ./zsh
   ];
