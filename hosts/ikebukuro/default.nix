@@ -17,6 +17,5 @@
     sops.enable = true;
     sway.enable = true;
     systemd-boot.enable = true;
-    userapps.enable = true;
   };
 }

@@ -19,6 +19,5 @@
     sddm.enable = true;
     sops.enable = true;
     systemd-boot.enable = true;
-    userapps.enable = true;
   };
 }
