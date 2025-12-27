@@ -11,6 +11,7 @@
     ./librewolf
     ./matlab
     ./onlyoffice
+    ./photography
     ./plasma
     ./sops
     ./sway

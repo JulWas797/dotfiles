@@ -21,6 +21,7 @@
     onlyoffice.enable = true;
     sops.enable = true;
     plasma.enable = true;
+    photography.enable = true;
     torrenting.enable = true;
     userapps.enable = true;
     vencord.enable = true;
