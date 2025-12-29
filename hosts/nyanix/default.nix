@@ -9,6 +9,7 @@
 
   modules = {
     _1password.enable = true;
+    adb.enable = true;
     fonts.enable = true;
     gaming.enable = true;
     java.enable = true;
