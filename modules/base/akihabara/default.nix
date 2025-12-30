@@ -27,4 +27,6 @@
       ];
     };  
   };
+
+  sops.defaultSopsFile = lib.mkForce ../../../secrets/homelab/default.yaml;
 }

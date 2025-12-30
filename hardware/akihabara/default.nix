@@ -21,13 +21,13 @@
     "/" = { 
       device = "/dev/disk/by-uuid/e2c6a0d6-ae0f-4bf2-9c45-a1b7b249f18f";
       fsType = "btrfs";
-      options = [ "subvol=@" ];
+      options = [ "subvol=@" "compress=zstd:1" ];
     };
 
     "/home" = { 
       device = "/dev/disk/by-uuid/e2c6a0d6-ae0f-4bf2-9c45-a1b7b249f18f";
       fsType = "btrfs";
-      options = [ "subvol=@home" ];
+      options = [ "subvol=@home" "compress=zstd:1" ];
     };
 
     "/boot" = { 
@@ -38,6 +38,8 @@
   };
 
   swapDevices = [ ];
+
+  services.btrfs.autoScrub.enable = true;
 
   nixpkgs.hostPlatform = lib.mkDefault "x86_64-linux";
 
