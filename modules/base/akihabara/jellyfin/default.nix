@@ -1,4 +1,4 @@
-{ lib, config, ... }:
+{ lib, config, pkgs, ... }:
 
 {
   options.modules.jellyfin.enable = lib.mkEnableOption "jellyfin";
@@ -8,5 +8,11 @@
       enable = true;
       openFirewall = true;
     };
+
+    environment.systemPackages = with pkgs; [
+      jellyfin
+      jellyfin-web
+      jellyfin-ffmpeg
+    ];
   };
 }
