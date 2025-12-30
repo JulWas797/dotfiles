@@ -31,6 +31,7 @@
       nyanix = (import ./flake/nyanix) {inherit inputs self;};
       shinjuku = (import ./flake/shinjuku) {inherit inputs self;};
       ikebukuro = (import ./flake/ikebukuro) {inherit inputs self;};
+      akihabara = (import ./flake/akihabara) {inherit inputs self;};
     };
   };
 }
