@@ -5,14 +5,14 @@ keys:
   - &akihabara age1hj06ycrwgwj2we722jpghmk8uxefwmlhakvrpe7k9pvxlg2gtauqc62cw5
 
 creation_rules:
-  - path_regex: secrets/homelab/.*\.ya?ml$
+  - path_regex: secrets/homelab/.*\.(ya?ml|json|pem)$
     key_groups:
     - age:
       - *akihabara
       - *shinjuku
       - *nyanix
       - *ikebukuro
-      
+
   - path_regex: secrets/.*\.ya?ml$
     key_groups:
     - age:
