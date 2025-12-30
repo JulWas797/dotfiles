@@ -11,18 +11,8 @@
       };
 
       "cloudflared-jellyfin-key" = {
-        format = "json";
+        format = "binary";
         sopsFile = ../../../../secrets/homelab/cloudflared_jellyfin_key.json;
-      };
-
-      "cloudflared-jellyfin-uuid-key" = {
-        key = "key";
-        sopsFile = ../../../../secrets/homelab/cloudflared_jellyfin_data.yaml;
-      };
-
-      "cloudflared-jellyfin-domain" = {
-        key = "domain";
-        sopsFile = ../../../../secrets/homelab/cloudflared_jellyfin_data.yaml;
       };
     };
 
@@ -31,10 +21,9 @@
     services.cloudflared = {
       enable = true;
 
-      tunnels."${config.sops.secrets.cloudflared-jellyfin-uuid-key}" = {
+      tunnels."8d086ae4-a829-4a2b-874b-6b2ef0ba2321" = {
         credentialsFile = "${config.sops.secrets.cloudflared-jellyfin-key.path}";
         default = "http_status:404";
-        ingress."${config.sops.secrets.cloudflared-jellyfin-domain}".service = "http://localhost:8096";
       };
     };
   };
