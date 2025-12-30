@@ -9,7 +9,6 @@ inputs.nixpkgs.lib.nixosSystem {
     ../../hosts/akihabara
     ../../modules/base/shared
     ../../modules/base/akihabara
-    inputs.nixos-hardware.nixosModules.common.gpu.amd
     inputs.sops-nix.nixosModules.sops
   ];
 }
