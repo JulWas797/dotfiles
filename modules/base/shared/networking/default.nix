@@ -84,8 +84,6 @@ in
   options.modules.networking.enable = lib.mkEnableOption "Networking";
 
   config = lib.mkIf config.modules.networking.enable {
-    networking.networkmanager.enable = true;
-
     sops.secrets = pskSecrets // eapSecrets;
     sops.templates = pskTemplates // eapTemplates;
   };

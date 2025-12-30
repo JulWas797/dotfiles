@@ -53,7 +53,6 @@
 
     fstrim.enable = true;
     libinput.touchpad.naturalScrolling = true;
-    
   };
   
   programs = {
@@ -81,10 +80,12 @@
     };
   };
 
-  networking.firewall.enable = true;
+  networking = {
+    networkmanager.enable = true;
+    firewall.enable = true;
+  };
 
   boot.kernelPackages = pkgs.linuxPackages_latest;
-
   system.stateVersion = "25.11";
   nixpkgs.config.allowUnfree = true;
 
