@@ -2,6 +2,7 @@
 
 {
   imports = [
+    ./cloudflared
     ./glances
     ./jellyfin
   ];
