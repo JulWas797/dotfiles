@@ -1,6 +1,10 @@
 { lib, ... }: 
 
 {
+  imports = [
+    ./glances
+  ];
+
   # temp
   services.openssh.enable = true;
 
