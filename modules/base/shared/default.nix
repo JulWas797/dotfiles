@@ -83,6 +83,11 @@
   networking = {
     networkmanager.enable = true;
     firewall.enable = true;
+
+    nameservers = [ 
+      "9.9.9.9" 
+      "1.1.1.1"
+    ];
   };
 
   boot.kernelPackages = pkgs.linuxPackages_latest;
