@@ -3,6 +3,7 @@
 {
   imports = [
     ./glances
+    ./jellyfin
   ];
 
   # temp
@@ -10,7 +11,7 @@
 
   networking = {
     firewall.enable = lib.mkForce false;
-    
+
     defaultGateway = "192.168.0.1";
 
     useDHCP = false;
