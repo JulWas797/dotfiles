@@ -58,7 +58,6 @@
       enable = true;
 
       extraPackages = with pkgs; [ 
-        vaapiVdpau
         libva
         libva-utils
       ];
