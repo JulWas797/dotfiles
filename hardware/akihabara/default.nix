@@ -33,7 +33,7 @@
     "/multimedia" = { 
       device = "/dev/disk/by-uuid/e2c6a0d6-ae0f-4bf2-9c45-a1b7b249f18f";
       fsType = "btrfs";
-      options = [ "subvol=@media" "noatime" ];
+      options = [ "subvol=@multimedia" "noatime" ];
     };
 
     "/boot" = { 
