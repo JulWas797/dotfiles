@@ -5,7 +5,7 @@
 
   config = lib.mkIf config.modules.cloudflared.enable {
     services.cloudflared = {
-      enable = false;
+      enable = true;
 
       tunnels = {
         "11fb3be3-7888-4ef5-ad09-2ee9766d5cff" = {
