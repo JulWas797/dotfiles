@@ -1,4 +1,4 @@
-{ config, lib, modulesPath, ... }:
+{ config, lib, modulesPath, pkgs, ... }:
 
 {
   imports = [
@@ -14,7 +14,7 @@
     kernelModules = [ ];
     extraModulePackages = [ ];
 
-    kernelParams = [ "nomodeset" ];
+    kernelParams = [ ];
   };
 
   fileSystems = {
@@ -53,5 +53,15 @@
     enableAllFirmware = true;
     enableRedistributableFirmware = true;
     cpu.amd.updateMicrocode = lib.mkDefault config.hardware.enableRedistributableFirmware;
+
+    graphics = {
+      enable = true;
+
+      extraPackages = with pkgs; [ 
+        vaapiVdpau
+        libva
+        libva-utils
+      ];
+    };
   };
 }

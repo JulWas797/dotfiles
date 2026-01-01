@@ -13,6 +13,7 @@
       jellyfin
       jellyfin-web
       jellyfin-ffmpeg
+      ffmpeg-full
     ];
   };
 }
