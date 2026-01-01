@@ -9,6 +9,7 @@
       
       activation.copy-fonts-local-share = lib.hm.dag.entryAfter ["writeBoundary"] ''
         run rm -rf $HOME/.local/share/fonts
+        run rm -rf $HOME/.local/share/fonts/*
         run mkdir -p $HOME/.local/share/fonts
         run cp ${pkgs.corefonts}/share/fonts/truetype/* $HOME/.local/share/fonts/
         run chmod 544 $HOME/.local/share/fonts

@@ -51,8 +51,12 @@
       variant = "";
     };
 
+    libinput = {
+      enable = true;
+      touchpad.naturalScrolling = true;
+    };
+
     fstrim.enable = true;
-    libinput.touchpad.naturalScrolling = true;
   };
   
   programs = {
