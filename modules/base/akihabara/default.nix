@@ -5,6 +5,8 @@
     ./cloudflared
     ./glances
     ./jellyfin
+    ./jenkins
+    ./maven
   ];
 
   # temp

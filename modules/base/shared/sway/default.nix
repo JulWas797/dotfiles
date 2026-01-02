@@ -28,8 +28,14 @@
     };
 
     users.users.jwas.extraGroups = [ "video" ];
-
     security.polkit.enable = true;
     services.gnome.gnome-keyring.enable = true;
+
+    xdg.portal = {
+      enable = true;
+      wlr.enable = true;
+
+      extraPortals = [ pkgs.xdg-desktop-portal-gtk ];
+    };
   };
 }
