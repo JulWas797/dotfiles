@@ -9,7 +9,7 @@
       lfs.enable = true;
       
       settings = {
-        server.TTP_PORT = 3001;
+        server.HTTP_PORT = 3001;
       };
     };
   };
