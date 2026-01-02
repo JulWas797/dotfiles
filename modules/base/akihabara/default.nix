@@ -7,6 +7,7 @@
     ./jellyfin
     ./jenkins
     ./maven
+    ./forgejo
   ];
 
   # temp
