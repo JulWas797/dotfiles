@@ -6,7 +6,6 @@
   config = lib.mkIf config.modules.maven.enable {
     services.reposilite = {
       enable = true;
-      extraArgs = [ "--token" "name:tempsecrettoken" ];
 
       plugins = with pkgs.reposilitePlugins; [
         groovy
