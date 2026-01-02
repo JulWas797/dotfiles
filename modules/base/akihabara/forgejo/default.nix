@@ -9,7 +9,18 @@
       lfs.enable = true;
       
       settings = {
-        server.HTTP_PORT = 3001;
+        DEFAULT.APP_NAME = "jwas git";
+        
+        server = {
+          DOMAIN = "git.jwas.pl";
+          ROOT_URL = "https://git.jwas.pl/";
+          HTTP_PORT = 3001;
+          LANDING_PAGE = "explore";
+        };
+
+        session.COOKIE_SECURE = true;
+        service.DISABLE_REGISTRATION = true; 
+        ui.DEFAULT_THEME = "forgejo-dark";
       };
     };
   };
