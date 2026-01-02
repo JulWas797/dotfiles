@@ -15,5 +15,6 @@
     maven.enable = true;
     systemd-boot.enable = true;
     sops.enable = true;
+    forgejo.enable = true;
   };
 }
