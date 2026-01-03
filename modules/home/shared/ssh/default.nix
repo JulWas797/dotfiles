@@ -1,4 +1,4 @@
-{ lib, config,  ... }:
+{ lib, config, pkgs,  ... }:
 
 {
   options.modules.ssh.enable = lib.mkEnableOption "ssh";
@@ -16,14 +16,17 @@
           addKeysToAgent = "yes";
         };
 
-        "git.jwas.pl" = {
-          hostname = "git.jwas.pl";
+        "gitssh.jwas.pl" = {
+          hostname = "gitssh.jwas.pl";
           user = "git";
           identityFile = "~/.ssh/id_forgejo";
           identitiesOnly = true;
           addKeysToAgent = "yes";
+          proxyCommand = "${pkgs.cloudflared}/bin/cloudflared access ssh --hostname %h";
         };
       };
     };
+
+    home.packages = [ pkgs.cloudflared ];
   };
 }

@@ -18,7 +18,6 @@
           LANDING_PAGE = "explore";
           SSH_DOMAIN = "gitssh.jwas.pl";
           SSH_PORT = 3002;
-          START_SSH_SERVER = true;
         };
 
         session.COOKIE_SECURE = true;
