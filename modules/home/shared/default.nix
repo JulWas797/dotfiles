@@ -14,6 +14,7 @@
     ./photography
     ./plasma
     ./sops
+    ./ssh
     ./sway
     ./tex
     ./torrenting
@@ -37,8 +38,8 @@
     enable = true;
 
     settings.user = {
-      email = "51297298+JulWas797@users.noreply.github.com";
-      name = "JulWas797";
+      email = "admin@jwas.pl";
+      name = "jwas";
     };
   };
 }

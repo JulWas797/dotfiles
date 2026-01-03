@@ -17,5 +17,6 @@
     userapps.enable = true;
     zsh.enable = true;
     waybar.enable = true;
+    ssh.enable = true;
   };
 }

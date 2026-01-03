@@ -16,6 +16,7 @@
     ./sops
     ./sway
     ./systemd-boot
+    ./ssh
   ];
 
   users.users.jwas = {

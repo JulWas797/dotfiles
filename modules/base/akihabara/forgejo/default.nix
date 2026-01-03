@@ -16,6 +16,8 @@
           ROOT_URL = "https://git.jwas.pl/";
           HTTP_PORT = 3001;
           LANDING_PAGE = "explore";
+          SSH_DOMAIN = "gitssh.jwas.pl";
+          SSH_PORT = 3002;
         };
 
         session.COOKIE_SECURE = true;

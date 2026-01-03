@@ -17,5 +17,6 @@
     sops.enable = true;
     sway.enable = true;
     systemd-boot.enable = true;
+    ssh.enable = true;
   };
 }
