@@ -19,5 +19,6 @@
     sddm.enable = true;
     sops.enable = true;
     systemd-boot.enable = true;
+    ssh.enable = true;
   };
 }
