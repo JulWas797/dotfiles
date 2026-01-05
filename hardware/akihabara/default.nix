@@ -41,6 +41,36 @@
       fsType = "vfat";
       options = [ "fmask=0077" "dmask=0077" ];
     };
+
+    "/mnt/hdd0" = {
+      device = "/dev/disk/by-uuid/df1c570c-7b2d-442c-892a-c25146a6b6c6";
+      fsType = "btrfs";
+      options = [ "subvol=@hdd0" "nofail" "noatime" "compress=zstd:1" "x-systemd.automount" ];
+    };
+
+    "/mnt/movies0" = {
+      device = "/dev/disk/by-uuid/df1c570c-7b2d-442c-892a-c25146a6b6c6";
+      fsType = "btrfs";
+      options = [ "subvol=@movies0" "nofail" "noatime" "compress=zstd:1" "x-systemd.automount" ];
+    };
+
+    "/mnt/anime0" = {
+      device = "/dev/disk/by-uuid/df1c570c-7b2d-442c-892a-c25146a6b6c6";
+      fsType = "btrfs";
+      options = [ "subvol=@anime0" "nofail" "noatime" "compress=zstd:1" "x-systemd.automount" ];
+    };
+
+    "/mnt/series0" = {
+      device = "/dev/disk/by-uuid/df1c570c-7b2d-442c-892a-c25146a6b6c6";
+      fsType = "btrfs";
+      options = [ "subvol=@series0" "nofail" "noatime" "compress=zstd:1" "x-systemd.automount" ];
+    };
+
+    "/mnt/downloads0" = {
+      device = "/dev/disk/by-uuid/df1c570c-7b2d-442c-892a-c25146a6b6c6";
+      fsType = "btrfs";
+      options = [ "subvol=@downloads0" "nofail" "noatime" "compress=zstd:1" "x-systemd.automount" ];
+    };
   };
 
   swapDevices = [ ];
