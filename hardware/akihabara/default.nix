@@ -75,7 +75,7 @@
     "/mnt/hdd1" = {
       device = "/dev/disk/by-uuid/a8bb3fd2-fe2d-4834-8a09-825ecda17c6f";
       fsType = "btrfs";
-      options = [ "subvol=@hdd0" "nofail" "noatime" "compress=zstd:1" "x-systemd.automount" ];
+      options = [ "subvol=@hdd1" "nofail" "noatime" "compress=zstd:1" "x-systemd.automount" ];
     };
 
     "/mnt/movies1" = {
@@ -99,7 +99,10 @@
 
   swapDevices = [ ];
 
-  services.btrfs.autoScrub.enable = true;
+  services.btrfs.autoScrub = {
+    enable = true;
+    interval = "weekly";
+  };
 
   nixpkgs.hostPlatform = lib.mkDefault "x86_64-linux";
 
