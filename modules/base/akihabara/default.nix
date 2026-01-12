@@ -8,6 +8,7 @@
     ./jenkins
     ./maven
     ./forgejo
+    ./flood
   ];
 
   # temp

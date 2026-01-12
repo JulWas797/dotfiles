@@ -16,5 +16,6 @@
     systemd-boot.enable = true;
     sops.enable = true;
     forgejo.enable = true;
+    flood.enable = true;
   };
 }
