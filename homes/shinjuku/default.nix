@@ -16,7 +16,6 @@
     konsole.enable = true;
     librewolf.enable = true;
     onlyoffice.enable = true;
-    matlab.enable = true;
     sops.enable = true;
     plasma.enable = true;
     tex.enable = true;

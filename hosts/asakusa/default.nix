@@ -1,11 +1,11 @@
-{ ... }:
+{ lib, ... }:
 
 {
   imports = [
-    ../../hardware/nyanix
+    ../../hardware/asakusa
   ];
 
-  networking.hostName = "nyanix";
+  networking.hostName = "asakusa";
 
   modules = {
     _1password.enable = true;
@@ -28,4 +28,6 @@
     systemd-boot.enable = true;
     tuned.enable = true;
   };
+
+  boot.loader.timeout = lib.mkDefault 5;
 }
