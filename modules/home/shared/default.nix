@@ -9,7 +9,6 @@
     ./java-development
     ./konsole
     ./librewolf
-    ./matlab
     ./onlyoffice
     ./photography
     ./plasma

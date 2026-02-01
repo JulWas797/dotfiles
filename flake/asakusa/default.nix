@@ -6,9 +6,9 @@ inputs.nixpkgs.lib.nixosSystem {
   };
 
   modules = [
-    ../../hosts/nyanix
+    ../../hosts/asakusa
     ../../modules/base/shared
-    ../../modules/base/nyanix
+    ../../modules/base/asakusa
     inputs.home-manager.nixosModules.home-manager
     inputs.sops-nix.nixosModules.sops
 
@@ -28,7 +28,7 @@ inputs.nixpkgs.lib.nixosSystem {
           inputs.sops-nix.homeManagerModules.sops
         ];
 
-        users.jwas = ../../homes/nyanix;
+        users.jwas = ../../homes/asakusa;
       };
     }
   ];
